@@ -2,8 +2,8 @@ import React from 'react';
 import PokemonDetail from './PokemonDetail';
 
 const PokemonSelector = (props) => {
-    const pokemonOptions = props.pokemon.map((pokemon) => {
-        return <option value={pokemon.name}>{pokemon.name}</option>;
+    const pokemonOptions = props.pokemon.map((pokemon, index) => {
+        return <option key={index} value={pokemon.name}>{pokemon.name}</option>;
     })
 
     function handleChange(event) {

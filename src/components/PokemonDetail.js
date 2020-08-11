@@ -3,12 +3,12 @@ import PokemonAbilitiesList from './PokemonAbilitiesList';
 import PokemonMovesList from './PokemonMovesList';
 
 const PokemonDetail = (props) => {
-        const abilities = props.selectedPokemon.abilities.map((ability) => {
-            return <PokemonAbilitiesList abilityName={ability.ability.name}/>
+        const abilities = props.selectedPokemon.abilities.map((ability, index) => {
+            return <PokemonAbilitiesList key={index} abilityName={ability.ability.name}/>
         })
 
-        const moves = props.selectedPokemon.moves.map((move) => {
-            return <PokemonMovesList moveName={move.move.name} />
+        const moves = props.selectedPokemon.moves.map((move, index) => {
+            return <PokemonMovesList key={index} moveName={move.move.name} />
         })
 
         let displayName;
